@@ -513,7 +513,7 @@ impl Processor {
 
             let create_ata_instruction =
                 &spl_associated_token_account::create_associated_token_account(
-                    payer_account.key,
+                    trusted_signer_authority.key,
                     payer_account.key,
                     clash_token_account.key,
                 );
@@ -521,6 +521,7 @@ impl Processor {
             invoke(
                 &create_ata_instruction,
                 &[
+                    trusted_signer_authority.clone(),
                     payer_account.clone(),
                     payer_token_account.clone(),
                     clash_token_account.clone(),

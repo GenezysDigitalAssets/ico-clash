@@ -274,7 +274,7 @@ export async function confirmCLASHPayment(clashAuthorityInfo: CLASHAuthorityInfo
   const instruction = new TransactionInstruction({
     keys: [
       // User accounts
-      {pubkey: exchangerInfo.SOLWallet.publicKey, isSigner: false, isWritable: true},
+      {pubkey: exchangerInfo.SOLWallet.publicKey, isSigner: false, isWritable: false},
       {pubkey: exchangerInfo.ATAWallet, isSigner: false, isWritable: true},
 
       // Token account
