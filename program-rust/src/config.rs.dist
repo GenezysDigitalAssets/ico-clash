@@ -1,0 +1,20 @@
+use solana_program::{pubkey, pubkey::Pubkey};
+
+// Constant values to verify contract authority authenticity
+pub const CLASH_SOL_WALLET: Pubkey = pubkey!("#CLASH_SOL_WALLET");
+pub const CLASH_TOKEN_ID: Pubkey = pubkey!("#CLASH_TOKEN_ID");
+pub const CLASH_PAYMENT_AUTHORITY: Pubkey = pubkey!("#CLASH_PAYMENT_AUTHORITY");
+
+// Seeds used to generate the PDA to sign transactions
+pub const PROGRAM_PDA_SEED1: &[u8] = b"genezys-fin";
+pub const PROGRAM_PDA_SEED2: &[u8] = b"clash-ico";
+
+// Clash token price in USD
+pub const CLASH_USD: f64 = #CLASH_USD;
+
+// Solana native token price in USD
+pub const SOL_USD: f64 = #SOL_USD;
+
+// Min and max values to buy during an ICO sale
+pub const MIN_USD_PRICE: f64 = #MIN_USD;
+pub const MAX_USD_PRICE: f64 = #MAX_USD;
